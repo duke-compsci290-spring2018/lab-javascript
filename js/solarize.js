@@ -19,6 +19,8 @@ function solarize() {
         alert('Image not loaded');
     }
     else {
+        // make sure that the image size matches the canvas size
+        originalImage.setSize(canvas.width, canvas.height);
         // choose the threshold dynamically
         var threshold = document.getElementById('threshold').value;
         solarizeImage(threshold).drawTo(canvas);
@@ -30,12 +32,12 @@ function solarize() {
 // so that changing the threshold does not have a cumultive effect
 function solarizeImage(threshold) {
     var result = new SimpleImage(canvas.width, canvas.height);
-    for (var pixel of result.pixels()) {
+    result.pixels().forEach(function(pixel) {
         var originalPixel = originalImage.getPixel(pixel.getX(), pixel.getY());
         pixel.setRed(solarizeValue(originalPixel.getRed(), threshold));
         pixel.setGreen(solarizeValue(originalPixel.getGreen(), threshold));
         pixel.setBlue(solarizeValue(originalPixel.getBlue(), threshold));
-    }
+    });
     return result;
 }
 
