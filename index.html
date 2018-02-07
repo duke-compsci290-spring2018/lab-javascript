@@ -12,23 +12,23 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://www2.cs.duke.edu/csed/coursera/mirror/course1/common/js/image/SimpleImage.js" async></script>
     <script src="js/greenscreen.js" async></script>
-    <title>Solarize Example</title>
+    <title>Green Screen Example</title>
 </head>
 <body>
     <h1 class="center">Green Screen Example</h1>
 
     <div class="left">
-        <canvas id = "fgcanvas"></canvas>
+        <canvas id = "fgCanvas"></canvas>
         <p>Foreground: <input type="file" multiple="false" accept="image/*" id="fgInput"></p>
     </div>
 
     <div class="right">
-        <canvas id = "bgcanvas"></canvas>
+        <canvas id = "bgCanvas"></canvas>
         <p>Background: <input type="file" multiple="false" accept="image/*" id="bgInput"></p>
     </div>
 
-    <p class="center"><input type="button" value="Create Composite"></p>
-    <p class="center"><input type="button" value="Clear Canvases"></p>
+    <p class="center"><input type="button" value="Create Composite" id="create"></p>
+    <p class="center"><input type="button" value="Clear Canvases" id="clear"></p>
     <p class="center">Green Threshold: <input type="range" min="0" max="255" value="240" id="threshold"></p>
 </body>
 </html>
