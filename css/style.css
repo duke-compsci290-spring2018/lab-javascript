@@ -1,0 +1,32 @@
+/*
+ * Author: Robert C. Duvall
+ */
+body {
+    background-color: wheat;
+    font-family: Verdana;
+    margin: 40px;
+}
+
+canvas {
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #c3c3c3;
+}
+
+input {
+    font-size: 12pt;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center;
+}
